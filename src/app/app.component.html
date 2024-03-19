@@ -1,0 +1,20 @@
+<h1 style="text-align: center;">To do List</h1>
+<br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-3">
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Inserir Task" aria-label="Inserir Task" aria-describedby="button-addon2"[(ngModel)]= "newtodo">
+  <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" style="color: white;" (click) = "saveTodo()">Add Task</button>
+</div>
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let todo of todos; let i = index;">
+            <th scope="row">{{i+1}}</th>
+            <td>{{todo.nome}}</td>
+            <td style="color: red; font-weight: bold;">X</td>
+          </tr>
+      </table>
+    </div>
+    </div>
+  </div>
